@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Header{
+    position: fixed;
+    border-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent; /* Initial transparent background */
+    margin-left: 10px;
+    margin-top: -280px;
+    height: 120px;
+    width: 100%;
+    transition: all 0.5s ease; /* Ajout de transition pour le fond */
+}
+.Header.scrolled {
+    background: #22B8FF; /* Background couleur lorsque défilé */
+    margin-top: -260px;
+    margin-left: 110px;
+    width: 88%;
+    height: 140px;
+    transition: all .5s ease;
+    z-index: 1;
+}
+.Header_navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.Header_navbar .title img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-size: cover;
+    margin-left: 50px;
+}
+.Header_navbar .title.scrolled{
+    width: 150px;
+    height: 150px;
+    margin-top: -50px;
+}
+.Header_navbar .buttons {
+    border: none;
+    display: flex;
+    font-family: "Quicksand";
+    font-size: 21px;
+    outline: none;
+    margin-left: -30px;
+}
+.Header_navbar .buttons a {
+    position: relative;
+    text-decoration: none;
+    margin-right: 40px;
+    color: #000;
+}
+.Header_navbar .buttons.scrolled{
+    margin-left: 50px;
+}
+.Header_navbar .buttons.scrolled a{
+    color: #fff;
+}
+.Header_navbar .buttons a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+.Header_navbar .buttons.scrolled a::after{
+    background-color: #fff;
+}
+.Header_navbar .buttons a:hover::after {
+    width: 100%;
+} 
+.Header_navbar .left i {
+    color: #22B8FF;
+    margin-right: 120px;
+    font-size: 25px;
+    transition: .4s ease;
+}
+.Header_navbar .left.scrolled i{
+    color: #fff;
+}
+.menu {
+    display: inline-block;
+    position: absolute;
+    top: 80%; /* Place le menu juste en dessous de l'icône */
+    left: 82%;
+    width: 10%; /* Largeur du menu */
+    background-color: #ffffff; /* Couleur de fond du menu */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordure du menu */
+    border-top: none; /* Supprime la bordure supérieure pour une apparence plus propre */
+    padding: 10px; /* Espacement interne du menu */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    text-align: center;
+    z-index: 1;
+}
+.menu.scrolled {
+    top: 105%; /* Place le menu juste en dessous de l'icône lors du défilement */
+    left: 80%;
+    transform: translateX(10px);
+    transition: all .5s ease;
+}
+.menu ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0;
+    margin: 0;
+    transform: transform .3s ease;
+}
+.menu li {
+    margin-top: 20px;
+    margin-bottom: 30px; /* Espacement entre les éléments de menu */
+}
+.menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+.menu a:hover::after {
+    width: 100%;
+}
+.Header_navbar .left {
+    transition: transform 0.4s ease; /* Ajoute une transition à la transformation */
+} 
+.Header_navbar .left .fa-bars {
+    display: block; /* Assurez-vous que l'icône fa fa-bars est affichée par défaut */
+}
+.Header_navbar .left .fa-times {
+    display: none; /* Assurez-vous que l'icône fa fa-times est masquée par défaut */
+}
+.Header_navbar .left.clicked .fa-bars {
+    display: none; /* Cache l'icône fa fa-bars lorsqu'elle est cliquée */
+}
+.Header_navbar .left.clicked .fa-times {
+    display: block; /* Affiche l'icône fa fa-times lorsqu'elle est cliquée */
+}
+.Header_navbar .left.clicked {
+    transform: scale(1.1); /* Effectue une rotation de 90 degrés lorsqu'il est cliqué */
+}

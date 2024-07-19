@@ -1,0 +1,240 @@
+.About{
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+.About .aboutme{
+    margin-bottom: 100px;
+}
+.About .aboutme h1{
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'QUicksand', sans-serif;
+    margin: 1rem 0;
+    text-align: center;
+}
+.About .aboutme .span{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 4% 0 0 47.5%;
+    background: #fff;
+    padding: 0 10px 0 10px;
+}
+.About .aboutme .span::before{
+    content: "";
+    position: absolute;
+    color: #808080;
+    margin-top: 15px;
+    left: 45%;
+    height: 2px;
+    background: #22B8FF;
+    border-radius: 50px;
+    width: 10%;
+    z-index: -1;
+}
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(82, 60%, 28%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(0, 0%, 100%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: 2rem;
+}   
+
+/*  ========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+    :root {
+      --h2-font-size: 1.5rem;
+      --small-font-size: .875rem;
+    }
+}   
+
+/*  =============== BASE ===============*/
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+/*  =============== CARD ===============*/
+.container{
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.container2{
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    margin-top: 3rem;
+}
+
+.card__container {
+    margin-left: 25rem;
+    width: 80%;
+    display: grid;
+    row-gap: 3.5rem;
+}   
+
+.card__article {
+    position: relative;
+    overflow: hidden;
+}   
+
+.card__img{
+    width: 328px;
+    border-radius: 1.5rem;
+    display: block;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-size: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card__data {
+    width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}   
+
+.card__description {
+    display: block;
+    font-size: 10px;
+    margin-bottom: .25rem;
+}   
+
+.card__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #22B8FF;
+    margin-bottom: .75rem;
+}   
+
+.card__button {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #808080;
+}   
+
+.card__button:hover {
+    text-decoration: underline;
+}   
+
+/*   Naming animations in hover */
+.card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}   
+
+.card__article:hover {
+    animation: remove-overflow 2s forwards;
+}   
+
+.card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}   
+
+.card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+}   
+
+/*   Card animation */
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(-7rem);
+    }
+}   
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}   
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(.5rem);
+    }
+}   
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+    50% {
+        overflow: hidden;
+    }
+}   
+
+/*  =============== BREAKPOINTS ===============*/
+/*   For small devices */
+@media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .card__data {
+        width: 250px;
+        padding: 1rem;
+    }
+}   
+
+/*   For medium devices */
+@media screen and (min-width: 768px) {
+    .card__container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}   
+
+/*   For large devices */
+@media screen and (min-width: 1120px) {
+    .container {
+        height: 100vh;
+    }
+
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card__img {
+        width: 348px;
+    }
+    .card__data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}   

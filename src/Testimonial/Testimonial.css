@@ -1,0 +1,218 @@
+:root {
+  --primary: #6a59ff;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
+html {
+  font-size: 65%;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+.testimonial {
+  position: relative;
+  max-width: 124rem;
+  padding: 4rem 1rem;
+  margin: 40% auto 5%;
+  text-align: center;
+  background: #fff;
+  z-index: 0;
+}
+
+.testimonial .title span{
+    font-size: 20px;
+    background: #fff;
+    padding: 0 10px 0 10px;
+    margin: 0 50px 0 60px;
+}
+
+.testimonial .title span::before{
+    content: "";
+    position: absolute;
+    color: #808080;
+    margin-top: 15px;
+    margin-left: -4.5rem;
+    height: 2px;
+    background: #22B8FF;
+    border-radius: 50px;
+    width: 19%;
+    z-index: -1;
+}
+
+.testimonial .title h1{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.swiper-slide h3{
+    margin-top: -50%;
+    margin-bottom: 50%;
+    color: #22B8FF;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.swiper-slide p{
+    display: flex;
+    font-size: 20px;
+    width: 80%;
+    margin-left: 4rem;
+    margin-top: -40%;
+    margin-bottom: 20%;
+    color: #fff;
+    font-weight: 600;
+}
+
+.swiper-slide i{
+    font-size: 10px;
+}
+.testimonial .slider_container{
+  margin-top: 10rem;
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  .swiper_container {
+    height: 47rem;
+  }
+  .swiper-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .swiper-slide img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.swiper-slide img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  border: 2px solid #999;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler {
+  position: relative;
+  bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  border: 1px solid #111;
+  z-index: -1;
+}
+
+.slider-controler .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width: 990px) {
+  .slider-controler .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .slider-controler .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .slider-controler .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .slider-controler .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.slider-controler .slider-arrow {
+  background: #fff;
+  width: 6rem;
+  height: 5rem;
+  border-radius: 50%;
+  left: 42%;
+  margin-top: -1.8rem;
+  transform: translateX(-42%);
+  border: 1px solid #fff;
+  top: -2rem;
+  padding: 5px 5px;
+  z-index: 1;
+}
+
+.slider-controler .slider-arrow ion-icon {
+  font-size: 2rem;
+  margin-top: 15px;
+  color: #222224;
+  z-index: 1;
+}
+
+.slider-controler .slider-arrow::after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  background: #22B8FF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #000;
+  top: 12px;
+  width: 70%;
+  border-radius: 50px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.slider-controler .slider-arrow:active::after{
+  transform: scale(0.9);
+  transition: all .3s ease-in-out;
+}
+
+.swiper-pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem;
+  display: none;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
