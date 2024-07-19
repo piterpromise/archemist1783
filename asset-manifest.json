@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d87b24ea.css",
+    "main.js": "/static/js/main.240eba73.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/testimonial8.jpeg": "/static/media/testimonial8.46ef319a1d5d75e6ab2d.jpeg",
+    "static/media/testimonial2.jpg": "/static/media/testimonial2.1c4422a5530331c8f550.jpg",
+    "static/media/testimonial7.jpg": "/static/media/testimonial7.cef85cc0c6e5b9b84375.jpg",
+    "static/media/testimonial6.jpg": "/static/media/testimonial6.a38c3bed8101e337abdc.jpg",
+    "static/media/Innovation3.mp4": "/static/media/Innovation3.ae77ff1ed10bc1049d75.mp4",
+    "static/media/testimonial3.jpeg": "/static/media/testimonial3.8178f10527f96f971d4a.jpeg",
+    "static/media/testimonial4.jpeg": "/static/media/testimonial4.1d290ed74dd020e66b66.jpeg",
+    "static/media/testimonial9.jpg": "/static/media/testimonial9.45b19147a2bf45d661d4.jpg",
+    "static/media/image-rbg.png": "/static/media/image-rbg.a072d15758f8c1bd0bc9.png",
+    "static/media/Collab-amico.svg": "/static/media/Collab-amico.db6a0dba5a1d648c15be.svg",
+    "static/media/testimonial1.jpg": "/static/media/testimonial1.d8454746e39a3bcdf9de.jpg",
+    "static/media/Image.png": "/static/media/Image.fe726b0abb2fbe740f0b.png",
+    "static/media/about2.jpg": "/static/media/about2.0f1f6d147fae59683f48.jpg",
+    "static/media/testimonial5.jpg": "/static/media/testimonial5.af2c4a417bfb9de6aaf5.jpg",
+    "static/media/about1.jpg": "/static/media/about1.e78dd6922e1d32019e71.jpg",
+    "index.html": "/index.html",
+    "main.d87b24ea.css.map": "/static/css/main.d87b24ea.css.map",
+    "main.240eba73.js.map": "/static/js/main.240eba73.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d87b24ea.css",
+    "static/js/main.240eba73.js"
+  ]
+}
