@@ -21,6 +21,23 @@
     margin-left: 10rem;
     height: 2px;
 }
+.footer .bottom .input.active,
+.input .a a.active,
+.Left .logo.active,
+.Left .little__text p.active,
+.middle .middle1 h1.active,
+.middle .middle1 p.active,
+.down .right .infos .active,
+.down .right .infos .location ion-icon.active,
+.down .right .infos .phone ion-icon.active,
+.down .right .infos .mail ion-icon.active,
+.down .right .infos .location h1.active,
+.down .right .infos .phone h1.active,
+.down .right .infos .mail h1.active,
+.conclusion h1.active{
+    opacity: 1;
+    transform: translateY(0);
+}
 .footer .bottom{
     background: #fff;
     display: flex;
@@ -38,6 +55,9 @@
     padding: 0rem 0rem;
     margin: -5rem 0;
     width: 700px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .input ion-icon{
     color: #808080;
@@ -72,6 +92,9 @@
     font-size: 15px;
     color: #808080;
     transition: all .3s ease-in-out;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .input .a:hover{
     background: #22B8FF;
@@ -87,10 +110,16 @@
     margin: -9rem 0 5rem 0;
 }
 .Left .logo{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
     display: flex;
     align-items: left;
     justify-content: space-between;
     margin: 0 5rem;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .Left .logo img{
     width: 250px;
@@ -106,6 +135,9 @@
     width: 400px;
     text-align: justify;
     margin: 0 10rem;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .Left .icons{
     margin: 3rem 10rem;
@@ -139,9 +171,15 @@
 .middle .middle1 h1{
     font-size: 25px;
     font-weight: 600;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .middle .middle1 p{
     font-size: 15px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .down .right{
     margin: 15rem 0;
@@ -158,12 +196,18 @@
 .down .right .infos .mail ion-icon{
     margin: 0 1rem;
     font-size: 25px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .down .right .infos .location h1,
 .down .right .infos .phone h1,
 .down .right .infos .mail h1{
     font-size: 20px;
     font-weight: 500;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
 }
 .conclusion{
     display: flex;
@@ -174,4 +218,98 @@
     margin: -13rem 0 -3rem 0;
     font-size: 20px;
     font-weight: 500;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .7s ease-out, transform 0.7s ease-out;
+}
+@media screen and (max-width: 1669px) {
+    .down::before{
+        display: inline-flex;
+        margin-top: 23%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .down{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        place-items: center;
+    }
+    .down::before{
+        display: none;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .down::before{
+        margin-top: 95%;
+    }
+    .down{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        place-items: center;
+    }
+    .Left .icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5rem;
+        margin: 5rem 0 10rem 0;
+    }
+    .Left .logo img{
+        margin: 0 12rem;
+    }
+    .right .infos{
+        margin: -10rem 0 5rem 0;
+    }
+}
+@media screen and (max-width: 750px) {
+    .middle{
+        display: flex;
+    }
+    .bottom{
+        display: flex;
+    }
+    .bottom .input{
+        display: flex;
+    }
+    .bottom .a{
+        display: flex;
+        margin-left: -90px;
+    }
+    .footer .bottom .input{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .middle{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .middle .middle1{
+        margin: 2rem 5rem;
+    }
+    .right{
+        align-content: flex-start;
+    }
+    .Left .logo img{
+        margin: 0 12rem;
+    }
+    .bottom .a{
+        display: flex;
+        margin-left: -190px;
+        margin-top: 1px;
+    }
+    .footer .bottom .input{
+        display: flex;
+        width: 500px;
+    }
+    .input ion-icon{
+        color: #808080;
+        font-size: 30px;
+        margin: 0 2rem 0 -7rem;
+    }
 }

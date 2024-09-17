@@ -1,0 +1,34 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+.scroll-button {
+    background-color: #808080;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0.8;
+}
+  
+.scroll-button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.scroll-button:hover i{
+    opacity: 1;
+    transform: translateY(-2px);
+    transition: all .2s ease-in-out;
+}
+  
+.scroll-button:focus {
+    outline: none;
+}
+  

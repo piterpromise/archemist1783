@@ -1,20 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Qualification.css'
 
 const Resume = () => {
+
+    useEffect(() => {
+        const revealElements = document.querySelectorAll('.qualification .title, .qualification__tabs, .qualification__sections, .qualification__content');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active'); // Retire la classe si l'élément sort du viewport
+                }
+            });
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        return () => {
+            revealElements.forEach(el => {
+                observer.unobserve(el);
+            });
+        };
+    }, []);
+
     const[toggleState, setToggleState] = useState(1);
 
     const toggleTab = (index) =>{
         setToggleState(index);
     }
     return(
-        <section className="qualification section">
+        <section className="qualification section" id='qualifications'>
             <div className="title">
                 <h1>Qualifications</h1>
                 <span className="substitle">My Personal Journey</span>
             </div>
 
-            <div className="qualification__container container">
+            <div className="qualification__container Container">
                 <div className="qualification__tabs">
                     <div className={toggleState === 1 ? "qualification__buttons qualification__active button--flex" : "qualification__buttons button--flex"} onClick={() => toggleTab(1)}>
                         <i className='fa fa-graduation-cap qualification__active qualification__icon'></i>

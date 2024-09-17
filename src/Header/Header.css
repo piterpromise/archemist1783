@@ -1,36 +1,40 @@
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.Header{
+
+.Header {
     position: fixed;
     border-radius: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent; /* Initial transparent background */
+    background: transparent;
     margin-left: 10px;
-    margin-top: -280px;
+    margin-top: 30px;
     height: 120px;
     width: 100%;
-    transition: all 0.5s ease; /* Ajout de transition pour le fond */
+    transition: all 0.5s ease;
 }
+
 .Header.scrolled {
-    background: #22B8FF; /* Background couleur lorsque défilé */
-    margin-top: -260px;
+    background: #22B8FF;
+    margin-top: 30px;
     margin-left: 110px;
     width: 88%;
     height: 140px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     z-index: 1;
 }
+
 .Header_navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
+
 .Header_navbar .title img {
     width: 200px;
     height: 200px;
@@ -38,12 +42,15 @@ body{
     background-size: cover;
     margin-left: 50px;
 }
-.Header_navbar .title.scrolled{
+
+.Header_navbar .title.scrolled {
     width: 150px;
     height: 150px;
     margin-top: -50px;
 }
+
 .Header_navbar .buttons {
+    cursor: pointer;
     border: none;
     display: flex;
     font-family: "Quicksand";
@@ -51,18 +58,22 @@ body{
     outline: none;
     margin-left: -30px;
 }
+
 .Header_navbar .buttons a {
     position: relative;
     text-decoration: none;
     margin-right: 40px;
     color: #000;
 }
-.Header_navbar .buttons.scrolled{
+
+.Header_navbar .buttons.scrolled {
     margin-left: 50px;
 }
-.Header_navbar .buttons.scrolled a{
+
+.Header_navbar .buttons.scrolled a {
     color: #fff;
 }
+
 .Header_navbar .buttons a::after {
     content: '';
     position: absolute;
@@ -73,53 +84,60 @@ body{
     background-color: #000;
     transition: width 0.3s ease;
 }
-.Header_navbar .buttons.scrolled a::after{
+
+.Header_navbar .buttons.scrolled a::after {
     background-color: #fff;
 }
+
 .Header_navbar .buttons a:hover::after {
     width: 100%;
-} 
+}
+
 .Header_navbar .left i {
     color: #22B8FF;
     margin-right: 120px;
     font-size: 25px;
     transition: .4s ease;
 }
-.Header_navbar .left.scrolled i{
+
+.Header_navbar .left.scrolled i {
     color: #fff;
 }
+
 .menu {
     display: inline-block;
     position: absolute;
-    top: 80%; /* Place le menu juste en dessous de l'icône */
+    top: 80%;
     left: 82%;
-    width: 10%; /* Largeur du menu */
-    background-color: #ffffff; /* Couleur de fond du menu */
-    border: 1px solid #ccc;
-    border-radius: 10px; /* Bordure du menu */
-    border-top: none; /* Supprime la bordure supérieure pour une apparence plus propre */
-    padding: 10px; /* Espacement interne du menu */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 10%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-top: none;
+    padding: 10px;
     font-size: 17px;
     text-align: center;
     z-index: 1;
 }
+
 .menu.scrolled {
-    top: 105%; /* Place le menu juste en dessous de l'icône lors du défilement */
+    top: 105%;
     left: 80%;
     transform: translateX(10px);
     transition: all .5s ease;
 }
+
 .menu ul {
-    list-style-type: none; /* Supprime les puces de la liste */
+    list-style-type: none;
     padding: 0;
     margin: 0;
     transform: transform .3s ease;
 }
+
 .menu li {
     margin-top: 20px;
-    margin-bottom: 30px; /* Espacement entre les éléments de menu */
+    margin-bottom: 30px;
 }
+
 .menu a {
     font-weight: 500;
     text-decoration: none;
@@ -127,6 +145,7 @@ body{
     position: relative;
     text-decoration: none;
 }
+
 .menu a::after {
     content: '';
     position: absolute;
@@ -137,24 +156,195 @@ body{
     background-color: #000;
     transition: width 0.3s ease;
 }
+
 .menu a:hover::after {
     width: 100%;
 }
+
 .Header_navbar .left {
-    transition: transform 0.4s ease; /* Ajoute une transition à la transformation */
-} 
+    transition: transform 0.4s ease;
+}
+
 .Header_navbar .left .fa-bars {
-    display: block; /* Assurez-vous que l'icône fa fa-bars est affichée par défaut */
+    display: block;
 }
+
 .Header_navbar .left .fa-times {
-    display: none; /* Assurez-vous que l'icône fa fa-times est masquée par défaut */
+    display: none;
 }
+
 .Header_navbar .left.clicked .fa-bars {
-    display: none; /* Cache l'icône fa fa-bars lorsqu'elle est cliquée */
+    display: none;
 }
+
 .Header_navbar .left.clicked .fa-times {
-    display: block; /* Affiche l'icône fa fa-times lorsqu'elle est cliquée */
+    display: block;
 }
+
 .Header_navbar .left.clicked {
-    transform: scale(1.1); /* Effectue une rotation de 90 degrés lorsqu'il est cliqué */
+    transform: scale(1.1);
+}
+.menu.notshow {
+    display: none;
+}
+.menu.show{
+    display: none;
+}
+
+@media (max-width: 1600px){
+    .Header{
+        margin: 3rem 0;
+    }
+    .Header.scrolled{
+        height: 130px;
+        width: 87%;
+        margin: 4rem 10rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Header{
+        margin: 3rem 0;
+    }
+    .Header_navbar .buttons{
+        margin-left: 20px;
+    }
+    .Header_navbar .buttons.scrolled{
+        margin-left: 30px;
+        margin-right: -50px;
+    }
+    .Header_navbar .title img{
+        margin-left: 0rem;
+    }
+    .Header.scrolled{
+        height: 130px;
+        width: 92%;
+        margin: 4rem 4rem;
+    }
+    .Header .left .fa-bars {
+        margin: 0 7rem;
+    }
+    .Header.scrolled .left .fa-bars {
+        margin: 0 7rem;
+    }
+    .Header.scrolled .left.clicked .fa-times {
+        margin: 0 7rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    .menu.show{
+        display: block;
+    }
+    .Header.scrolled{
+        height: 130px;
+        width: 92%;
+        margin: 4rem 4rem;
+    }
+    .Header.scrolled .left .fa-bars {
+        margin: 0 7rem;
+    }
+    .Header.scrolled .left.clicked .fa-times {
+        margin: 0 7rem;
+    }
+    .Header .left .fa-times{
+        margin: 0 7rem;
+    }
+    .Header_navbar .buttons {
+        display: none;
+    }
+    .Header.scrolled .menu{
+        margin: 0 -20rem;
+    }
+    .Header.scrolled .menu.scrolled{
+        margin: 0 -13rem;
+    }
+    .Header.scrolled .title img{
+        margin: 0 3rem;
+    }
+    .menu{
+        display: inline-block;
+        width: 20%;
+        padding: 1rem 2rem;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 0 -13rem;
+    }
+    
+    .menu.show ul {
+        display: block;
+    }
+    .menu.scrolled{
+        margin: 0 -5rem;
+    }
+    .Header_navbar .title.scrolled {
+        width: 50px;
+        height: 50px;
+        margin-top: -150px;
+        margin-left: -30px;
+    }
+}
+@media (max-width: 650px){
+    .menu{
+        width: 30%;
+        margin: 0 -25rem;
+    }
+    .Header.scrolled .menu.scrolled{
+        margin: 0 -15rem;
+    }
+    .Header.scrolled{
+        height: 120px;
+        width: 92%;
+        margin: 3rem 2rem;
+    }
+}
+@media (max-width: 350px){
+    .menu{
+        padding: 0 5rem;
+        width: 50%;
+        margin: 0 -20rem;
+    }
+    .Header.scrolled .menu.scrolled{
+        margin: 0 -22rem;
+    }
+    .Header.scrolled{
+        display: flex;
+        height: 100px;
+        width: 92%;
+        margin: 2rem 2rem;
+    }
+    .Header_navbar .title{
+        margin: 0 -7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Header_navbar .title img{
+        width: 150px;
+        height: 150px;
+        padding: 0 40px;
+    }
+    .Header_navbar .title.scrolled {
+        width: 20px;
+        height: 20px;
+        margin-top: 0px;
+        margin-left: -90px;
+    }
+    .Header_navbar .left .fa-bars{
+        margin: 0 3rem;
+    }
+    .Header .left.clicked .fa-times {
+        margin: 0 3rem;
+    }
+    .Header.scrolled .left .fa-bars {
+        margin: 0 3rem;
+    }
+    .Header.scrolled .left.clicked .fa-times {
+        margin: 0 3rem;
+    }
+    .menu{
+        width: 50%;
+        margin: 5rem -22rem;
+        padding: 0 5rem;
+    }
 }

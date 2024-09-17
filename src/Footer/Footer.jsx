@@ -1,8 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from '../Images/Image.png'
 import './Footer.css'
 
 const Footer = () => {
+
+    useEffect(() => {
+        const revealElements = document.querySelectorAll('.footer .bottom .input, .input .a a, .Left .logo, .Left .little__text p, .middle .middle1 h1, .middle .middle1 p, .down .right .infos .location ion-icon, .down .right .infos .phone ion-icon, .down .right .infos .mail ion-icon, .down .right .infos .location h1, .down .right .infos .phone h1, .down .right .infos .mail h1, .conclusion h1');
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active'); // Retire la classe si l'élément sort du viewport
+                }
+            });
+        });
+    
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    
+        return () => {
+            revealElements.forEach(el => {
+                observer.unobserve(el);
+            });
+        };
+      }, []);
+
   return (
     <section className='footer'>
         <div className="bottom">

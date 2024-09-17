@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import'./ContactUs.css'
 
 const ContactUS = () => {
+
+    // Fonction pour gérer le reveal-on-scroll
+    useEffect(() => {
+        const revealElements = document.querySelectorAll('.Contact .title, .left .title__left h3, .left .title__left p, .right .title__right, .right .zones .name, .right .zones .name2, .right .zones ion-icon, .right .zones textarea, .right .body .button a');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active'); // Retire la classe si l'élément sort du viewport
+                }
+            });
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        return () => {
+            revealElements.forEach(el => {
+                observer.unobserve(el);
+            });
+        };
+    }, []);
+
   return (
-    <section className='Contact section__section'>
+    <section className='Contact section__section' id='contact'>
         <div className="title">
             <h1>Contact</h1>
             <span className="substitle">Write us below</span>

@@ -7,6 +7,7 @@ import Qualification from "./Qualifications/Qualification"
 import Testimonial from "./Testimonial/Testimonial"
 import ContactUS from "./Contact Us/ContactUS"
 import Footer from "./Footer/Footer"
+import Scroll from "./Scroll/Scroll"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Testimonial />
       <ContactUS />
       <Footer />
+      <Scroll/>
 
     </>
   );
