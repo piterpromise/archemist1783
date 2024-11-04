@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/archemist1783/static/css/main.1503515f.css",
-    "main.js": "/archemist1783/static/js/main.866dead7.js",
-    "static/js/453.1407b060.chunk.js": "/archemist1783/static/js/453.1407b060.chunk.js",
+    "main.css": "/archemist1783/static/css/main.be7a197e.css",
+    "main.js": "/archemist1783/static/js/main.61b63447.js",
     "static/media/testimonial8.jpeg": "/archemist1783/static/media/testimonial8.46ef319a1d5d75e6ab2d.jpeg",
     "static/media/testimonial2.jpg": "/archemist1783/static/media/testimonial2.1c4422a5530331c8f550.jpg",
     "static/media/testimonial7.jpg": "/archemist1783/static/media/testimonial7.cef85cc0c6e5b9b84375.jpg",
@@ -19,12 +18,11 @@
     "static/media/testimonial5.jpg": "/archemist1783/static/media/testimonial5.af2c4a417bfb9de6aaf5.jpg",
     "static/media/about1.jpg": "/archemist1783/static/media/about1.e78dd6922e1d32019e71.jpg",
     "index.html": "/archemist1783/index.html",
-    "main.1503515f.css.map": "/archemist1783/static/css/main.1503515f.css.map",
-    "main.866dead7.js.map": "/archemist1783/static/js/main.866dead7.js.map",
-    "453.1407b060.chunk.js.map": "/archemist1783/static/js/453.1407b060.chunk.js.map"
+    "main.be7a197e.css.map": "/archemist1783/static/css/main.be7a197e.css.map",
+    "main.61b63447.js.map": "/archemist1783/static/js/main.61b63447.js.map"
   },
   "entrypoints": [
-    "static/css/main.1503515f.css",
-    "static/js/main.866dead7.js"
+    "static/css/main.be7a197e.css",
+    "static/js/main.61b63447.js"
   ]
 }
