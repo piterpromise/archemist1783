@@ -49,9 +49,9 @@ const Footer = () => {
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam pariatur sunt maxime culpa excepturi porro earum unde repellendus quis hic?</p>
                 </div>
                 <div className="icons">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                    <ion-icon name="logo-facebook"></ion-icon>
-                    <ion-icon name="logo-github"></ion-icon>
+                    <a href='https://www.youtube.com/@Archemist-nf2df'><ion-icon name="logo-youtube"></ion-icon></a>
+                    <a href='https://web.facebook.com/profile.php?id=100063762602743'><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href='https://github.com/Archemist1783/Archemist1783.github.io'><ion-icon name="logo-github"></ion-icon></a>s
                     <ion-icon name="logo-google"></ion-icon>
                 </div>
             </div>

@@ -5,7 +5,7 @@ const ContactUS = () => {
 
     // Fonction pour gérer le reveal-on-scroll
     useEffect(() => {
-        const revealElements = document.querySelectorAll('.Contact .title, .left .title__left h3, .left .title__left p, .right .title__right, .right .zones .name, .right .zones .name2, .right .zones ion-icon, .right .zones textarea, .right .body .button a');
+        const revealElements = document.querySelectorAll('.Contact .title, .left .title__left h3, .left .title__left p, .left .networks h1, .right .title__right, .right .zones .name, .right .zones .name2, .right .zones ion-icon, .right .zones textarea, .right .body .button a');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

@@ -21,7 +21,7 @@ import slide_image_9 from '../Images/testimonial9.jpg'
 const Testimonial = () => {
 
   useEffect(() => {
-    const revealElements = document.querySelectorAll('.testimonial .title h1, .testimonial .title span, .swiper-slide h3, .swiper-slide p, .swiper-slide i, .swiper-slide img, .slider-controler');
+    const revealElements = document.querySelectorAll('.testimonial .title, .swiper-slide h3, .swiper-slide p, .swiper-slide i, .swiper-slide img, .slider-controler');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -95,7 +95,7 @@ const Testimonial = () => {
             },
             1080: {
                 slidesPerView: 3,
-                spaceBetween: 50,
+                spaceBetween: 80,
             },
         }}
         pagination={{ el: '.swiper-pagination', clickable: false }}

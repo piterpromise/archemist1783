@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Typewriter from 'typewriter-effect';
-import Video from '../Images/Innovation3.mp4';
-import '../Home/Home.css';
+import React, { useEffect } from 'react'
+import Typewriter from 'typewriter-effect'
+import Video from '../Images/Innovation3.mp4'
+import '../Home/Home.css'
 
 const Render = () => {
 
@@ -49,7 +49,9 @@ const Render = () => {
                             suscipit omnis mollitia ipsa at tempora facere vitae? Numquam, natus aut?
                         </p>
                     </div>
-                    <a href="#"> Hire me! <i className='fa fa-arrow-right i1'></i></a>
+                    <a href='/signin'>
+                        Hire me! <i className='fa fa-arrow-right i1'></i>
+                    </a>
                     <div className='icons'>
                         <a href='https://x.com/SighomP'><i className='fa fa-twitter'></i></a>
                         <a href='https://studio.youtube.com/channel/UCMJCo0nakdHK_f_tMPJWVzA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D'><i className='fa fa-youtube'></i></a>
@@ -61,4 +63,4 @@ const Render = () => {
     );
 }
 
-export default Render;
+export default Render

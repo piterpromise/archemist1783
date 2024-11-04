@@ -37,18 +37,20 @@ html {
   z-index: 0;
 }
 
-.testimonial .title span{
-    font-size: 20px;
-    background: #fff;
-    padding: 0 10px 0 10px;
-    margin: 0 50px 0 60px;
+.testimonial .title{
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.testimonial .title span.active,
-.testimonial .title h1.active,
+.testimonial .title span{
+    font-size: 20px;
+    background: #fff;
+    padding: 0 10px 0 10px;
+    margin: 0 50px 0 60px;
+}
+
+.testimonial .title.active,
 .swiper-slide h3.active,
 .swiper-slide p.active,
 .swiper-slide i.active,
@@ -72,16 +74,20 @@ html {
 .testimonial .title h1{
     font-size: 50px;
     font-weight: 600;
-    margin: 0 0 15px 0;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin: 0 0 5px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .swiper-slide h3{
     margin-top: -50%;
     margin-bottom: 50%;
     color: #22B8FF;
+    margin-left: 60px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     font-size: 30px;
@@ -112,7 +118,6 @@ html {
 }
 .testimonial .slider_container{
   margin-top: 10rem;
-  z-index: -1;
 }
 
 @media (max-width: 500px) {
@@ -133,6 +138,7 @@ html {
   width: 42rem;
   height: 42rem;
   border-radius: 50%;
+  padding: 1%;
   object-fit: cover;
   background-size: cover;
   border: 2px solid #999;
@@ -159,6 +165,14 @@ html {
   margin-top: 10rem;
   border: 1px solid #999;
   z-index: -1;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slider-controler.active{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .slider-controler .swiper-button-next {
@@ -199,7 +213,7 @@ html {
   width: 6rem;
   height: 5rem;
   border-radius: 50%;
-  left: 42%;
+  left: 40%;
   margin-top: -1.8rem;
   transform: translateX(-42%);
   border: 1px solid #fff;

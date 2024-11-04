@@ -1,0 +1,156 @@
+.flyers{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.header img{
+    width: 150px;
+    height: 120px;
+    margin: 5rem 15rem;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.right_text{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 60%;
+    top: -25%;
+    margin-left: 200px;
+    text-align: left;
+    color: #e14a1b;
+    position: relative;
+}
+
+.right{
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: center;
+}
+
+.right .box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 320px;
+    margin-left: -280px;
+    color: #e14a1b;
+    column-gap: 10px;
+    border: 1px solid #e14a1b;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 40px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    top: -200%;
+    bottom: -100%;
+}
+
+.right .box1:hover{
+    background: #e14a1b;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+.right .box1:hover ion-icon{
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.right .box1 ion-icon{
+    font-size: 40px;
+    color: #e14a1b;
+    padding-top: 2px;
+}
+
+.right .box1 .content{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .box1 .content h1{
+    font-size: 12px;
+    padding-top: 10px;
+    margin-bottom: -20px;
+}
+
+.right .box1 .content h2{
+    font-size: 20px;
+}
+
+.foot{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left{
+    position: relative;
+    display: block;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    margin-top: 50px;
+    top: -230%;
+}
+
+.left .div1{
+    margin-left: 200px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    column-gap: 15px;
+}
+
+.left .div1 ion-icon{
+    background: #e14a1b;
+    font-size: 20px;
+    position: relative;
+    top: 0px;
+    border: 1px solid #e14a1b;
+    padding: 1rem 1rem;
+    border-radius: 50%;
+}
+
+.left .div1 h1{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #e14a1b;
+}
+
+.right__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30%;
+}
+
+.right__img img{
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.center{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+}

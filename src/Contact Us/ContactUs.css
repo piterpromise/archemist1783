@@ -54,6 +54,9 @@
     width: 200px;
     margin-left: 10.5rem;
     margin-top: 5rem;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .left .networks .icons{
     display: block;
@@ -128,7 +131,8 @@
 .right .body .button a.active,
 .left .title__left h3.active,
 .left .title__left p.active,
-.right .title__right.active{
+.right .title__right.active,
+.left .networks h1.active{
     opacity: 1;
     transform: translateY(0);
 }
